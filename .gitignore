@@ -4,6 +4,7 @@ group_vars/*.yml
 *.sw*
 cred/*
 vendor-roles/*
+*.retry
 
 # Created by http://www.gitignore.io
 

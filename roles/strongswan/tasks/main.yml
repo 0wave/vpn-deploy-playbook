@@ -5,11 +5,21 @@
   apt: pkg={{ item }} state=installed
   with_items:
     - strongswan
-    - strongswan-plugin-xauth-generic
-    - strongswan-plugin-xauth-eap
-    - strongswan-plugin-eap-md5
-    - strongswan-plugin-eap-mschapv2
-    - strongswan-plugin-eap-radius
+    - libstrongswan
+    - libstrongswan-extra-plugins
+    - libstrongswan-standard-plugins
+    - libcharon-extra-plugins
+    - strongswan-charon
+    - strongswan-ike
+    - strongswan-libcharon
+    - strongswan-ikev1
+    - strongswan-ikev2
+#    - strongswan
+#    - strongswan-plugin-xauth-generic
+#    - strongswan-plugin-xauth-eap
+#    - strongswan-plugin-eap-md5
+#    - strongswan-plugin-eap-mschapv2
+#    - strongswan-plugin-eap-radius
   notify: restart ipsec
   when: ansible_distribution == "Ubuntu"
   tags:
